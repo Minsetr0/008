@@ -14,22 +14,17 @@ Console.WriteLine("\nНа сколько позиций влево его сдв
 int shiftRepetitions = Console.Read();
 
 for (int i = 0; i < shiftRepetitions; i++)
-{ 
-    for (int j = 0; j < numbers.Length; j++)
+{
+    tempNumber = numbers[numbers.Length - 1];
+
+    for (int j = numbers.Length - 1; j > 0; j--)
     {
-        if (j != numbers.Length - 1)
-        {
-            tempNumber = numbers[j + 1];
-            numbers[j] = tempNumber;
-        }
-        else
-        {
-            numbers[j] = 0;
-        }
+        numbers[j] = numbers[j - 1];
     }
+    numbers[0] = tempNumber;
 }
 
 for (int i = 0; i < numbers.Length; i++)
 {
-    Console.WriteLine(numbers[i] + " ");
+    Console.Write(numbers[i] + " ");
 }
