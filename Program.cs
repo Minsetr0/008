@@ -10,7 +10,7 @@ for (int i = 0; i < numbers.Length; i++)
 
 Console.WriteLine("\nНа сколько позиций влево его сдвинуть?");
 
-int shiftRepetitions = Console.Read();
+int shiftRepetitions = Convert.ToInt32(Console.ReadLine());
 
 for (int i = 0; i < shiftRepetitions; i++)
 {
